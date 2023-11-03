@@ -17,12 +17,14 @@ services:
     container_name: broker1
     depends_on:
       - zookeeper
+    volumes:
+      - "C:\\Users\\Админ\\Desktop\\Kafka\\Kafka-In-Action-Source-Code\\appuser1:/home/appuser"
     ports:
       - "29092:29092"
       - "9092:9092"
       - "9101:9101"
     environment:
-      KAFKA_BROKER_ID: 1
+      KAFKA_BROKER_ID: 0
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker1:29092,PLAINTEXT_HOST://localhost:9092
@@ -39,12 +41,14 @@ services:
     container_name: broker2
     depends_on:
       - zookeeper
+    volumes:
+      - "C:\\Users\\Админ\\Desktop\\Kafka\\Kafka-In-Action-Source-Code\\appuser2:/home/appuser"
     ports:
       - "29093:29093"
       - "9093:9093"
       - "9201:9201"
     environment:
-      KAFKA_BROKER_ID: 2
+      KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker2:29093,PLAINTEXT_HOST://localhost:9093
@@ -61,12 +65,14 @@ services:
     container_name: broker3
     depends_on:
       - zookeeper
+    volumes:
+      - "C:\\Users\\Админ\\Desktop\\Kafka\\Kafka-In-Action-Source-Code\\appuser3:/home/appuser"
     ports:
       - "29094:29094"
       - "9094:9094"
       - "9301:9301"
     environment:
-      KAFKA_BROKER_ID: 3
+      KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker3:29094,PLAINTEXT_HOST://localhost:9094
