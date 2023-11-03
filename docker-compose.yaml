@@ -19,6 +19,7 @@ services:
       - zookeeper
     volumes:
       - "C:\\Users\\Админ\\Desktop\\Kafka\\Kafka-In-Action-Source-Code\\appuser1:/home/appuser"
+      - "C:\\Users\\Админ\\Desktop\\Kafka\\Kafka-In-Action-Source-Code\\kafka1:/etc/kafka"
     ports:
       - "29092:29092"
       - "9092:9092"
@@ -43,6 +44,7 @@ services:
       - zookeeper
     volumes:
       - "C:\\Users\\Админ\\Desktop\\Kafka\\Kafka-In-Action-Source-Code\\appuser2:/home/appuser"
+      - "C:\\Users\\Админ\\Desktop\\Kafka\\Kafka-In-Action-Source-Code\\kafka2:/etc/kafka"
     ports:
       - "29093:29093"
       - "9093:9093"
@@ -67,6 +69,7 @@ services:
       - zookeeper
     volumes:
       - "C:\\Users\\Админ\\Desktop\\Kafka\\Kafka-In-Action-Source-Code\\appuser3:/home/appuser"
+      - "C:\\Users\\Админ\\Desktop\\Kafka\\Kafka-In-Action-Source-Code\\kafka3:/etc/kafka"
     ports:
       - "29094:29094"
       - "9094:9094"
